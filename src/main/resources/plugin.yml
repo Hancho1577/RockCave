@@ -1,0 +1,5 @@
+name: RockMine
+author: Hancho
+version: "1.0.0"
+api: "1.0.0"
+main: rockMine.RockMine
