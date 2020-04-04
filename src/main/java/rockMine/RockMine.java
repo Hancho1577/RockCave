@@ -37,7 +37,7 @@ public class RockMine extends PluginBase implements Listener{
 				resetMine(false);
 			}
 			
-		},20,true);
+		},30,true);
 		this.getServer().getPluginManager().registerEvents(this, this);
 	}
 	
@@ -58,7 +58,7 @@ public class RockMine extends PluginBase implements Listener{
 			Iterator<Location> it = this.resetQueue.keySet().iterator();
 			while(it.hasNext()) {
 				Location location = it.next();
-				if((date - this.resetQueue.get(location)) < 10) continue;
+				if((date - this.resetQueue.get(location)) < 30) continue;
 				this.caveLevel.setBlock(location, this.stoneBlock);
 				it.remove();
 			}
