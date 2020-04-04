@@ -1,6 +1,5 @@
 package rockMine;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -48,7 +47,7 @@ public class RockMine extends PluginBase implements Listener{
 	}
 	
 	public void resetMine(boolean resetAll) {
-		int date = (int) (new Date().getTime() / 1000);
+		int date = (int) (System.currentTimeMillis() / 1000);
 		if(resetAll) {
 			for(Location location : resetQueue.keySet()) {
 				this.caveLevel.setBlock(location, this.stoneBlock);
@@ -74,7 +73,7 @@ public class RockMine extends PluginBase implements Listener{
 		Block block = ev.getBlock();
 		if(level != this.caveLevel) return;
 		if(ev.isCancelled()) ev.setCancelled(false);
-		this.resetQueue.put(block.getLocation(), (int) (new Date().getTime() / 1000));
+		this.resetQueue.put(block.getLocation(), (int) (System.currentTimeMillis() / 1000));
 	}
 	
 	@EventHandler
