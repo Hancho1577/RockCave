@@ -1,5 +1,5 @@
 name: RockMine
-author: Hancho
+main: com.hancho.rockmine.RockMine
 version: "1.0.0"
 api: "1.0.0"
-main: rockMine.RockMine
+author: Hancho

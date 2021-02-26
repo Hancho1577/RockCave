@@ -1,4 +1,4 @@
-package rockMine;
+package com.hancho.rockmine;
 
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
